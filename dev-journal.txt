@@ -1,0 +1,22 @@
+﻿== 2011-11-10 ==
+===cors===
+So, iriscouch doesn't allow cross domain posting. That's odd and will make this website harder to do. I have to have then enable cors or write a proxy. A PHP proxy might be the way to go. There absolutely must be a boilerplate one around somewhere.
+
+===layout===
+I already forget how the site works :)
+
+===css===
+There are two css files: style & apps. I suppose style is general surii main page style and apps is for client apps? Yep, apps only need include apps.css.
+
+===js===
+Now that that's covered, what about JavaScript? I think I want to somehow add support to see the site in other mobile browsers. But games won't work because they expect the A & B buttons which the iPhone doesn't have. Some games are all touch though. The most I'll do is not automatically scroll the skinny and t-bone screens if I don't detect a 3DS.
+
+===tiny===
+I had to fix TinyCart b/c the links are all now t.co.
+
+== 2011-06-25 ==
+== on database ==
+I need to better define for myself the structure of the database. The main surii database will have all the friend code and pigmii info.
+
+== on security ==
+I think CouchDB can be secured from unauthorized updates by some "validation function" which will ignore row updates made by users who did not create the database.

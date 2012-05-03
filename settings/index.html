@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>surii.net Settings</title>
+  <meta name="description" content="surii.net user settings">
+  <meta name="author" content="Ryan Westphal">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="./favicon.ico">
+  <link rel="apple-touch-icon" href="./surii-icon.png" />
+  <!--<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/themes/sunny/jquery-ui.css" type="text/css" />-->
+  <link href="../css/apps.css" rel="stylesheet" type="text/css" />
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body id="settings" class="skinnyscroll">
+  <div>
+    <div class="content">
+      <h1>
+        <img src="surii-icon.png" alt="" /> <span>Settings</span></h1>
+      <form name="settings" method="post" action=".">
+      <ul class="settinginputs">
+        <li class="friend-code">
+          <button type="button">&nbsp;</button>
+          <label for="friendCode">
+            Friend Code</label> <input id="friendCode" type="text" name="friendCode" maxlength="14" /></li>
+        <li>
+          <label for="nickName">
+            Nick Name</label><input id="nickName" type="text" name="nickName" maxlength="32" /></li>
+        <li>
+          <label>
+            Pigmii</label><input type="hidden" name="pigmii" value="" />
+          <span class="note">Your Pigmii may be used to represent you in games &amp; apps.</span>
+          <img alt="" src="../img/loading.gif" class="loading-pigmii" />
+          <ul class="pigmiis">
+          </ul>
+        </li>
+      </ul>
+      </form>
+    </div>
+  </div>
+  <div id="pnlSearch" style="display: none;">
+    <p>Search for your info.</p>
+    <input type="text" name="searchFriendCode" />
+  </div>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+  <!--<script type="text/javascript" src="../js/jquery-ui-1.8.13.surii.min.js"></script>-->
+  <script type="text/javascript" src="../js/apps.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

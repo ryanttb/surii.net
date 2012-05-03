@@ -1,0 +1,81 @@
+﻿/* settings */
+
+#settings
+{
+  background: url(../img/lines.png);
+}
+
+.content
+{
+  background: #fdfdfd;
+  border-radius: 8px;
+  margin: 16px;
+  padding: 24px;
+}
+
+h1
+{
+  text-align: center;
+}
+
+h1 img
+{
+}
+
+h1 span
+{
+  display: block;
+  font-size: 16px;
+  margin-top: 16px;
+}
+
+ul { list-style-type: none; }
+
+.settinginputs { margin-top: 112px;}
+
+.settinginputs>li { margin: 4px 0; }
+
+.settinginputs>li label
+{
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ccc)); 
+  border-radius: 16px;
+  display: block;
+  font-weight: bold;
+  height: 16px;
+  margin: 2px auto;
+  padding: 4px;
+  text-align: center;
+  text-decoration: none;
+  width: 50%;
+}
+
+.settinginputs>li input
+{
+  color: #444;
+  font-weight: bold;
+  margin: 2px auto;
+  text-align: center;
+  width: 100%;
+}
+
+.friend-code button
+{
+  float: right;
+  font-size: .8em;
+}
+
+.note
+{
+  display: block;
+  font-size: 11px;
+  margin: 0 auto;
+  text-align: center;
+  width: 75%;
+}
+
+.pigmiis a
+{
+  display: block;
+  height: 16px;
+  width: 16px;
+}

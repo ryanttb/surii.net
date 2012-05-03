@@ -1,0 +1,33 @@
+﻿.content
+{
+  background: url(../img/paper.png);
+  color: #EDEDED;
+  padding: 16px 0;
+}
+
+.logo
+{
+  margin-left: 24px;
+}
+
+.posts
+{
+  margin: 16px;
+}
+
+.posts a
+{
+  background: #3A5770;
+  border-radius: 8px;
+  color: #EDEDED;
+  display: block;
+  list-style-type: none;
+  margin: 8px 0;
+  padding: 8px;
+  text-decoration: none;
+}
+
+.posts a:visited
+{
+  color: #EDEDED;
+}

@@ -1,0 +1,55 @@
+﻿/* surii home page */
+
+#surii
+{
+  background: url(../img/lines.png);
+}
+
+#surii .content
+{
+  background: #fdfdfd;
+  border-radius: 8px;
+  margin: 16px;
+  padding: 24px;
+}
+
+#surii .logoruby
+{
+  color: #999;
+  cursor: default;
+  font-size: .8rem;
+}
+
+#surii .tagline
+{
+  background: #e0e0e0;
+  border-radius: 8px;
+  font-size: .9rem;
+  margin-top: 8px;
+  padding: 2px;
+  text-align: center;
+}
+
+#surii .apps
+{
+  margin-top: 144px;
+}
+
+#surii .apps li
+{
+  display: inline-block;
+  list-style-type: none;
+}
+
+#surii .apps a
+{
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ccc)); 
+  border: solid 1px #ccc;
+  border-radius: 8px;
+  display: block;
+  margin: 4px;
+  padding: 8px 8px 6px 8px;
+  
+
+}
