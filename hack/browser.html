@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>3DS Test</title>
+  <meta name="description" content="3DS NetFront Access Info">
+  <meta name="author" content="Ryan Westphal">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/index.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+    h2
+    {
+      font-size: 1rem;
+    }
+    h3
+    {
+      font-size: .8rem;
+    }
+  </style>
+</head>
+<body class="skinnyscroll" onload="javascript:load();">
+  <div>
+    <div>
+      <h1>
+        Browser Info</h1>
+      <h2>
+        NetFront Access Version</h2>
+      <p>
+        1.7.412</p>
+      <h2>
+        User Agent</h2>
+      <p id="testUserAgent">
+      </p>
+      <h2>
+        Canvas</h2>
+      <p id="testCanvas">
+      </p>
+      <h2>
+        Storage</h2>
+      <p id="testLocalStorage">
+      </p>
+      <p id="testSessionStorage">
+      </p>
+      <h2>
+        window</h2>
+      <p>
+        Every key of window:</p>
+      <p id="testWindowKeys">
+      </p>
+      <h2>
+        window values</h2>
+      <p>
+        Enter a window key to see its value:</p>
+      <input id="windowkey" type="text" name="windowkey" />
+      <button type="button" onclick="javascript:document.getElementById('windowval').innerHTML = window[document.getElementById('windowkey').value];">
+        Show</button>
+      <p id="windowval">
+      </p>
+      <h2>
+        window.screen</h2>
+      <p>
+        Every window.screen value:</p>
+      <p id="testWindowScreen">
+      </p>
+      <h2>
+        navigator</h2>
+      <p>
+        Every key of navigator:</p>
+      <p id="testNavKeys">
+      </p>
+      <h2>
+        navigator values</h2>
+      <p>
+        Enter a navigator key to see its value:</p>
+      <input id="navkey" type="text" name="navkey" />
+      <button type="button" onclick="javascript:document.getElementById('navval').innerHTML = navigator[document.getElementById('navkey').value];">
+        Show</button>
+      <p id="navval">
+      </p>
+      <h2>
+        document</h2>
+      <p>
+        Every key of document:</p>
+      <p id="testDocumentKeys">
+      </p>
+      <h2>
+        document values</h2>
+      <p>
+        Enter a document key to see its value:</p>
+      <input id="documentkey" type="text" name="documentkey" />
+      <button type="button" onclick="javascript:document.getElementById('documentval').innerHTML = document[document.getElementById('documentkey').value];">
+        Show</button>
+      <p id="documentval">
+      </p>
+      <h2>
+        plugins</h2>
+      <p>
+        List of navigator.plugins:</p>
+      <p id="testPlugins">
+      </p>
+    </div>
+  </div>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript">
+    (function () {
+      function $get(id) {
+        return document.getElementById(id);
+      }
+
+      window.load = function () {
+        var tests = {
+          testUserAgent: function () { return navigator.userAgent; },
+          testCanvas: function () { return "The canvas element " + ((!!document.createElement('canvas').getContext) ? "is" : "is not") + " supported"; },
+          testLocalStorage: function () { return "localStorage " + (('localStorage' in window && window['localStorage'] !== null) ? "is" : "is not") + " supported"; },
+          testSessionStorage: function () { return "sessionStorage " + (('sessionStorage' in window && window['sessionStorage'] !== null) ? "is" : "is not") + " supported"; },
+          testWindowKeys: function () {
+            var keys = "";
+            for (var key in window) {
+              if (key != "load") {
+                keys += (key + ", ");
+              }
+            }
+            return keys;
+          },
+          testWindowScreen: function () {
+            var screenVals = "";
+            for (var key in window.screen) {
+              screenVals += (key + ": " + window.screen[key] + ", ");
+            }
+            return screenVals;
+          },
+          testNavKeys: function () {
+            var keys = "";
+            for (var key in navigator) {
+              keys += (key + ", ");
+            }
+            return keys;
+          },
+          testDocumentKeys: function () {
+            var keys = "";
+            for (var key in document) {
+              keys += (key + ", ");
+            }
+            return keys;
+          },
+          testPlugins: function () {
+            var plugins = "";
+            for (var i = 0; i < navigator.plugins.length; i++) {
+              plugins += (navigator.plugins[i].name + "<br>");
+            }
+            return plugins;
+          }
+        };
+
+        for (var testkey in tests) {
+          $get(testkey).innerHTML = tests[testkey]();
+        }
+      }
+    })();
+  </script>
+</body>
+</html>

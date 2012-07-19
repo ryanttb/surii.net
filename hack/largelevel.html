@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>Large level test</title>
+
+  <meta name="description" content="Dump a whole large level onto the screen">
+  <meta name="author" content="Ryan Westphal">
+
+  <meta name="viewport" content="width=1024, height=670 initial-scale=2">
+
+  <link href="css/index.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+      body>div 
+      {
+        width: 1024px;
+        height: 670px;
+        position: absolute;
+        overflow: hidden;
+        left: 0;
+        top: 0;
+      }
+      .link
+      {
+        position: absolute;
+        left: 640px;
+        top: 576px;
+        width: 16px;
+        height: 16px;
+        background: url(img/link.png);
+        -webkit-transition-property: left, top;
+        -webkit-transition-duration: 1s;
+        -webkit-transition-timing-function: ease;
+      }
+  </style>
+</head>
+<body class="">
+  <div>
+    <div class="link"></div>
+  </div>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      window.scrollTo(498, 448);
+      $("body>div").css("background", "url(img/zelda-overworld.png)").click(function (e) {
+        $(".link").css({
+          left: e.offsetX - 8,
+          top: e.offsetY - 8
+        });
+      });
+    });
+  </script>
+</body>
+</html>

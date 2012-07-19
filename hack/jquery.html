@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>3DS Test</title>
+
+  <meta name="description" content="3DS web test">
+  <meta name="author" content="Ryan Westphal">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="css/index.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div id="jquerytest" class="skinnyscroll" style="background: green;">
+  </div>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      window.scrollTo(39, 218);
+      $("#jquerytest").html("o hai jQuery");
+    });
+  </script>
+</body>
+</html>

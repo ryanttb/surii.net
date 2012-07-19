@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ok and cancel</title>
+  <meta name="description" content="B and A buttons with sounds">
+  <meta name="author" content="Ryan Westphal">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/index.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+    .buttonvis
+    {
+      font-family: Impact;
+      font-size: 48px;
+      font-weight: bold;
+      margin: 0 32px;
+    }
+    p
+    {
+      margin: 8px;
+    }
+  </style>
+</head>
+<body class="skinny">
+  <div>
+    <h1>
+      &quot;ok&quot; &amp; &quot;cancel&quot; sounds!</h1>
+    <span class="buttonvis b">B</span> <span class="buttonvis a">A</span>
+  </div>
+  <div>
+    <p>
+      Push the A button or B to make sounds. Yes, I have access to the B button now thanks to input=number and the blur event.</p>
+    <p>
+      D-Pad Up obnoxiously triggers my B button (potentially many times...turbo?!) but doesn't make a sound and also makes the screen bounce. Sheesh.</p>
+    <input type="number" name="buttoninput" style="position: absolute; left: -16px; bottom: -16px; width: 1px; height: 1px; border: none; padding: 0; z-index: -1; line-height: 0; font-size: 0; -webkit-user-select: none;" />
+  </div>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      var 
+      aTimeout = null,
+      bTimeout = null,
+      skipBlurTimeout = null;
+
+
+      $("[name='buttoninput']").blur(function (e) {
+        $(this).focus();
+        skipBlurTimeout = setTimeout(function () {
+          clearTimeout(bTimeout);
+          $(".b").css("color", "red");
+          bTimeout = setTimeout(function () {
+            $(".b").css("color", "black");
+          }, 100);
+        }, 100);
+      }).keydown(function (e) {
+        if (e.which == 13) {
+          clearTimeout(aTimeout);
+          $(".a").css("color", "green");
+          aTimeout = setTimeout(function () {
+            $(".a").css("color", "black");
+          }, 100);
+        }
+      }).focus();
+
+      $(document).bind("keydown keypress keyup", function (e) {
+        if (e.which == 38) {
+          clearTimeout(skipBlurTimeout);
+        }
+      })
+    });
+  </script>
+</body>
+</html>

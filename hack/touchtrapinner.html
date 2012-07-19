@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Touch Trap Test IFRAME</title>
+  <meta name="description" content="3DS touch trap">
+  <meta name="author" content="Ryan Westphal">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/index.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div style="background: red; position: absolute; left: 0; top: 0; right: 0; bottom: 0;">
+    <h1>
+      inner</h1>
+    <p class="output"></p>
+  </div>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("body>div").bind("click mousedown mouseup mouseover mouseout", function (e) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        $(".output").html($(".output").html() + e.type + " ");
+        return false;
+      });
+    });
+  </script>
+</body>
+</html>

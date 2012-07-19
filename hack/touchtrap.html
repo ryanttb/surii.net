@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Touch Trap Test</title>
+  <meta name="description" content="3DS touch trap">
+  <meta name="author" content="Ryan Westphal">
+  <meta name="viewport" content="width=device-width, initial-scale=2">
+  <link href="css/index.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+    body { -webkit-user-select: none; }
+  </style>
+</head>
+<body class="skinny">
+  <div style="background: #fff;">
+    <h1>touch trap</h1>
+    <p>Holding the stylus to the bottom screen causes an annoying popup. Can we disable that?</p>
+    <p class="trackEvent"></p>
+  </div>
+  <div class="bottom">
+    <!--<canvas width="320" height="212" style="position: absolute; left: 0; top: 0; width: 320px; height: 212px;"></canvas>-->
+    <!--<iframe width="320" height="218" src="touchtrapinner.html" style="border-style: none; position: absolute; left: 0; top: 0;"></iframe>-->
+  </div>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $(".bottom").mousemove(function (e) {
+        $(this).html("" + e.pageX + ", " + e.pageY);
+      });
+      //      var track = false;
+
+      //      $(document).mousemove(function (e) {
+      //        if (track) {
+      //          $(".trackEvent").html($(".trackEvent").html() + "move<br>");
+      //        }
+      //      });
+
+      //      $("canvas").bind("click mousedown mouseup mouseover mouseout", function (e) {
+      //        e.preventDefault();
+      //        e.stopImmediatePropagation();
+      //        if (e.type == "mousedown") {
+      //          //alert("move the stylus");
+      //          //track = true;
+      //        }
+      //        $(window).trigger("unload");
+      //        return false;
+      //      });
+
+      //      var context = $("canvas")[0].getContext("2d");
+      //      context.fillRect(0, 0, 320, 212);
+    });
+  </script>
+</body>
+</html>

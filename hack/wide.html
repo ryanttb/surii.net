@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Super wide test</title>
+  <meta name="description" content="Super wide test">
+  <meta name="author" content="Ryan Westphal">
+  <meta name="viewport" content="width=640, height=212, initial-scale=1">
+  <link href="css/index.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+    .wide
+    {
+      height: 212px;
+      overflow: hidden;
+      width: 640px;
+    }
+    
+    .wide > div
+    {
+      height: 212px;
+      left: 0px;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      width: 640px;
+    }
+  </style>
+</head>
+<body class="wide" style="background: green;">
+  <div style="background: blue;">
+  </div>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+  <!--<script type="text/javascript" src="js/script.js"></script>-->
+  <script type="text/javascript">
+    $(function () {
+      $(window).bind("scroll", function (e) {
+        $("body>div:first-child").html($("body>div:first-child").html() + "scroll<br>");
+      });
+    });
+  </script>
+</body>
+</html>

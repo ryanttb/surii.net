@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>3DS T-Bone Test</title>
+  <meta name="description" content="3DS t-bone test">
+  <meta name="author" content="Ryan Westphal">
+  <meta name="viewport" content="width=device-width, initial-scale=2.0">
+  <link href="css/index.css" rel="stylesheet" type="text/css" />
+  <style>
+    h2
+    {
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+</head>
+<body class="tbonescroll">
+  <div style="background: red;">
+    <h1>
+      O hai 3DS!</h1>
+    <p>
+      Top screen! T-bone has a wide top screen and an expandable bottom screen. You can scroll it though it moves around funny. You get A button and single-tap. Set your meta viewport initial-scale to 2.</p>
+  </div>
+  <div style="background: green;">
+    <h2>
+      Bottom screen!</h2>
+    <p>
+    Tail pork chop consectetur excepteur tongue, culpa venison duis jerky pancetta do turkey. Ham do ham hock pig adipisicing sunt. Consequat short loin adipisicing, pork belly tempor elit fugiat. Ex consectetur aute, sunt esse pariatur anim proident ribeye labore ground round enim. In dolore nulla, tongue chicken est ribeye consectetur occaecat sed. Qui jerky tri-tip id veniam drumstick sed. Eu et shank commodo, mollit dolore ullamco.
+
+Duis ham ullamco, consequat et short loin ball tip shank ex sed est ribeye. Proident short loin nulla pastrami pork belly, drumstick labore ribeye ground round enim flank. Et nisi venison occaecat, hamburger magna ex nostrud exercitation. Strip steak ham hock eiusmod magna reprehenderit. Cupidatat flank dolor tenderloin, ad ham hock fugiat meatball sausage. Short ribs labore nulla fugiat proident. T-bone elit spare ribs hamburger, aliqua minim drumstick.
+
+Consequat incididunt sausage, veniam qui ground round spare ribs. Eiusmod consequat pancetta, et officia nisi ut id flank sint. Laborum incididunt ground round t-bone chuck corned beef. Do sunt nostrud tenderloin labore, corned beef nisi pork belly tongue aute ball tip. Ut ex consequat pork loin, meatball fugiat ullamco short ribs commodo beef ribs anim officia fatback venison. Incididunt excepteur veniam, sint pig proident ground round non shankle quis tongue ribeye. Minim shank consectetur nulla ground round, nisi fugiat incididunt.
+</p>
+  </div>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $(window).bind("scroll", function (e) {
+        $("body>div:first-child").html($("body>div:first-child").html() + "scroll<br>");
+      });
+    });
+  </script>
+</body>
+</html>

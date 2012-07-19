@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>another sound?</title>
+  <meta name="description" content="">
+  <meta name="author" content="Ryan Westphal">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/index.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="tiny">
+  <div>
+    <h1>
+      &quot;done&quot; sound!</h1>
+    <p>
+      Push the A button to cause the browser to make the download complete, what I'm calling the &quot;done&quot; sound!</p>
+    <!--<div>
+      <form method="post" target="submittarget" action=".">
+        <input type="number" name="someno" value="3" />
+      </form>
+    </div>
+    <div id="lblkeydown">
+    </div>
+    <iframe id="submittarget" name="submittarget" src="about:blank"></iframe>-->
+    <form method="post" target="submittarget" action="about:blank"></form>
+    <iframe width="0" height="0" style="display: none;" name="submittarget"></iframe>
+  </div>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("input").bind("keydown keyup keypress", function (e) {
+        //e.stopPropagation();
+        //$("#lblkeydown").html($("#lblkeydown").html() + e.type + ", " + e.which + " ");
+        //$(this).trigger("blur");
+        //return false;
+      });
+
+      $(document).keydown(function (e) {
+        if (e.which == 13) {
+          $("form").attr("action", ".").submit(); //.attr("action", "about:blank").submit(); // $('<div style="display: none;"><form method="post" target="submittarget" action="."></form><iframe width="0" height="0" id="submittarget" name="submittarget" src="about:blank"></iframe></div>').appendTo("body").find("form").submit(); //.parent().remove();
+          $("iframe").bind("readystatechange", function () {
+            $(this).attr("src", "about:blank");
+            //$("form").attr("action", "about:blank").submit();
+          });
+          //var container = $('<div style="display: none;"><form method="post" target="submittarget" action="."></form><iframe width="0" height="0" id="submittarget" name="submittarget" src="about:blank"></iframe></div>').appendTo("body"); //.find("form").submit(); //.parent().remove();
+          //container.find("iframe").load(function () { $(this).parent().remove(); });
+          //var form = container.find("form").submit(); // $('<div style="display: none;"><form method="post" target="submittarget" action="."></form><iframe width="0" height="0" id="submittarget" name="submittarget" src="about:blank"></iframe></div>').appendTo("body").find("form").submit(); //.parent().remove();
+
+          //$("form").submit();
+          //          var keydown = jQuery.Event("keydown");
+          //          keydown.which = 13;
+
+          //          var keypress = jQuery.Event("keypress");
+          //          keypress.which = 13;
+
+          //          var keyup = jQuery.Event("keyup");
+          //          keyup.which = 13;
+
+
+
+          //          $("input").focus().trigger(keypress).trigger(keyup).trigger(keydown).trigger(keyup);
+          //          enter = jQuery.Event("keypress");
+          //          $("input").focus();
+          //          var enter = jQuery.Event("keydown");
+          //          enter.which = 13;
+          //          $("input").trigger(enter);
+          //          enter = jQuery.Event("keypress");
+
+          //$('<iframe width="0" height="0"><html><body><img src="data:image/png;base64,done" /></body></html></iframe>').appendTo("body").remove();
+          //$('<iframe width="0" height="0"></iframe>').appendTo("body").remove();
+
+          //$(document).trigger("hashchange");
+
+          //var movecode = ':window.location.href = window.location.href + "#noise"';
+          //$('<iframe width="0" height="0"><html><body onload="javascript' + movecode + ';"></body></html></iframe>').appendTo("body"); //.remove();
+
+          //$('<a href="#somewhere">bing!</a><div id="somewhere" name="somewhere"></div>').appendTo("body");
+          //$("body").find("a").focus().mouseover().mousedown().mouseup().click();
+
+          //var movecode = ':window.location.href = "data:text/html;<html><body>next</body></html>";';
+          //$('<iframe width="0" height="0"><html><body onload="javascript' + movecode + '"></body></html></iframe>').appendTo("body"); //.remove();
+          //$('<iframe width="0" height="0"><html><body onload="javascript:window.back();"></body></html></iframe>').appendTo("body"); //.remove();
+
+          //$("iframe").attr("src", "data:text/html;charset=utf-8;base64,PGh0bWw+PGhlYWQ+PHRpdGxlPm5ldyB0aXRsZTwvdGl0bGU+PC9oZWFkPjxib2R5Pm8gaGFpPC9ib2R5PjwvaHRtbD4=");
+        }
+      });
+    });
+  </script>
+</body>
+</html>

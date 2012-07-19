@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Analog stick test</title>
+  <meta name="description" content="Can I trap the analog stick?">
+  <meta name="author" content="Ryan Westphal">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/index.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+    iframe 
+    {
+      z-index: -1;
+    }
+  </style>
+</head>
+<body class="skinny">
+  <div>
+    <h1>
+      Analog test</h1>
+  </div>
+  <div style="background: #fff;">
+    <iframe width="128" height="64" src="analoginner.html">
+    </iframe>
+  </div>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("iframe").focus();
+    });
+  </script>
+</body>
+</html>

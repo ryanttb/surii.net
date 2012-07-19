@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>dialog</title>
+
+  <meta name="description" content="Check 3DS's native dialogs">
+  <meta name="author" content="Ryan Westphal">
+
+  <meta name="viewport" content="width=device-width, initial-scale=">
+
+  <link href="css/index.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="skinnyscroll">
+  <div>
+    <h1>dialog</h1>
+    <p>This page tests some various dialogs.</p>
+    <h2>alert</h2>
+    <p>A basic alert</p>
+    <button id="cmdAlert" type="button">alert</button>
+    <h2>confirm</h2>
+    <p>A yes or no question.</p>
+    <button id="cmdConfirm" type="button">confirm</button>
+    <p id="lblConfirm"></p>
+
+  </div>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script>
+    $(function() {
+      $("#cmdAlert").click(function() {
+        alert("I AM ALERT.");
+      });
+      $("#cmdConfirm").click(function() {
+        if (confirm("Do you want to play a game?")) {
+          $("#lblConfirm").text("Game on!");
+        } else {
+          $("#lblConfirm").text("Sad panda!");
+        }
+      });
+    });
+  </script>
+</body>
+</html>

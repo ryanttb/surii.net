@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>3DS Test</title>
+  <meta name="description" content="3DS web developer journal">
+  <meta name="author" content="Ryan Westphal">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/index.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="skinnyscroll">
+  <div>
+    <h1>Developer Journal</h1>
+    <h2>to do</h2>
+    <ul>
+      <li>Find a clean way to have A or B switch between their default and the done sound</li>
+      <li>Check out what audio types the 3DS plays in their player</li>
+      <li>Link to a 3D photo, can we go back into the web browser?</li>
+      <li>Throw some other random data uri's at the browser via regular links</li>
+      <li>0x0px body?</li>
+      <li>Large body to trap scrolling?</li>
+      <li>All element test page (one at a time, automated)</li>
+      <li>test web workers</li>
+    </ul>
+    <h2>2011-12-16</h2>    
+    <p>The new 3DS Hotspots page from Nintendo is: <a href="http://www.nintendo.com/mobile/hotspot/">http://www.nintendo.com/mobile/hotspot/</a>. I wonder what else is in that mobile folder.</p>
+    <p>Here's an example call it uses to find hotspots by address: <a href="http://www.nintendo.com/3ds/hotspots/lookup?address=%2001970&distance=10&page=1&size=10">http://www.nintendo.com/3ds/hotspots/lookup?address=%2001970&amp;distance=10&amp;page=1&amp;size=10</a></p>
+    <h2>2011-11-10</h2>    
+    <ul>
+      <li>checking native dialogs: alert, confirm &amp; prompt</li>
+    </ul>
+    <h2>2011-06-26</h2>    
+    <ul>
+      <li>We do have animated GIFs, of course</li>
+      <li>We do not have fixed position, it acts like absolute position, that's a bummer.</li>
+    </ul>
+    <h2>2011-06-25</h2>
+    <ul>
+      <li>Sad that both Start and Select popup the stupid address bar w/o sending an event</li>
+    </ul>
+    <h2>2011-06-19</h2>
+    <ul>
+      <li>Putting the input trap in an iframe doesn't help me also trap the analog stick</li>
+    </ul>
+    <h2>2011-06-18</h2>
+    <ul>
+      <li>If you absolutely (or fixed) position something above a &quot;tiny&quot; frame, it is hidden</li>
+    </ul>
+    <h2>2011-06-17</h2>
+    <ul>
+      <li>No Float32Array support, heh</li>
+    </ul>
+    <h2>2011-06-15</h2>
+    <ul>
+      <li>Clicking on a label attached to an input doesn't trigger the software keyboard. That's too bad.</li>
+      <li>Triggering click or mousedown on a label attached to an input doesn't do anything</li>
+    </ul>
+    <h2>2011-06-14</h2>
+    <ul>
+      <li>Going to try an idea for analog stick trapping tonight, this probably won't work out</li>
+      <li>Didn't work out, I wound up playing with the D-Pad though</li>
+      <li>The D-Pad will make a new sound if you put focus on an element in the center of a table with other elements around it</li>
+      <li>I'm going to coin the D-Pad sound the &quot;move&quot; sound</li>
+    </ul>
+    <h2>2011-06-13</h2>
+    <ul>
+      <li>I was mentioned on GBAtemp :D</li>
+      <li>EMouseEventLongPressed is an enum in the NetFront code, I wonder if I can find a way to disable their default popup</li>
+      <li>I wonder if I can fake a mouse click</li>
+      <li>I can fake a wav file download! The act of the download finishing makes a noise, phew!</li>
+      <li>I'm now simulating the wav via a fake data URI. In theory it won't even attempt to go to the web server but no way to tell really.</li>
+      <li>img tags are shorter and appear to cause the same effect</li>
+      <li>I CAN use the mouse cursor events as long as I -webkit-user-select: none the body tag. The popup still appears but this might be useful for &quot;tiny&quot; css classed games</li>
+      <li>I'm trying to make other sounds but not getting far</li>
+      <li>I tried a bunch of different things (hashchange, iframes) but couldn't get the browser to make the back or forward button sounds</li>
+      <li>input type=number makes fun sounds on focus &amp; blur in hardware but not when I trigger them via events in JavaScript</li>
+      <li>Wow! I think I just found a much better way to keep the screen focused on the game</li>
+      <li>I also have access to the B button now as well as sounds for B &amp; A buttons</li>
+      <li>Very successful testing today</li>
+      <li>I can't trigger the ok or cancel sounds manually. The done sound is the only one I can play at will so far.</li>
+      <li>Single-tap also triggers my B button. I will have to clean up how I test that it is the B button by attempting to ignore all known causes.</li>
+    </ul>
+    <h2>2011-06-11</h2>
+    <ul>
+      <li>Fullscreen skinny mode gives me nice access to down, left and right on the D-Pad, nothing moves. Up still moves the screen.</li>
+      <li>I tried to trap touch with an iframe and that was a no-go. I doubt img will work too.</li>
+      <li>There are no items in navigator.plugins :(</li>
+      <li>I actually have to scrollTo(0, 218) on skinny modes</li>
+      <li>tiny mode gives full access to the D-Pad</li>
+      <li>I only get window.scroll events when the document is vertically larger than the viewable area. I don't get horizontal scroll events :(</li>
+      <li>Scratch that, I do get horizontal scroll events if I set the viewport width larger than the device width</li>
+      <li>Pushed these tests into github: <a href="https://github.com/TrippingTheBits/3ds">https://github.com/TrippingTheBits/3ds</a></li>
+      <li>I definitely don't get scroll events if the document isn't greater than the viewport, even though the browser window scrolls via D-Pad up or stylus</li>
+      <li>A very wide screen could scroll horizontally though, on purpose. Might be a useful game mechanic.</li>
+      <li>viewport height does have an effect on wide mode</li>
+      <li>window does not get any analog stick events</li>
+      <li>window does get resize+scroll events when zoom it hit</li>
+      <li>I can't counter zoom by dropping and re-adding the meta viewport tag</li>
+      <li>If you fit the entire level of a game into a window, you can use the analog pad to an advantage, touch to play the game: move here, etc.</li>
+      <li>CSS transitions work :D</li>
+      <li>Touch pad scroll -> tap behavior feels pretty good</li>
+      <li>I can see this page <a href="http://en.wikipedia.org/wiki/File:USK12_neu2.svg">http://en.wikipedia.org/wiki/File:USK12_neu2.svg</a> which I think means that we have SVG support</li>
+      <li>Nothing happens when I go to a WAV file. I think I got an &quot;unsupported&quot; message when I went to an mp3 file</li>
+      <li>Calling window.resize doesn't appear to help anything</li>
+      <li>Seems window screenX and screenY always return 0</li>
+      <li>Also seems window scrollX and scrollY don't change when the user moves the window frame in any of the full screen modes :( I would very much like to know how to detect the amount of movement)</li>
+      <li>window.moveBy doesn't do anything, not that I actually thought that one would :P</li>
+      <li>No box-shadow (not even -webkit)</li>
+      <li>Only -webkit-gradient works</li>
+      <li>Ajax seems ok</li>
+    </ul>
+    <h2>2011-06-10</h2>
+    <h3>another developer</h3>
+    <p>A web dev named Andy Smith is trying this as well: <a href="http://andysmith.co.uk/blog/2011/06/10/3ds-browser-opens-up-homebrew/">http://andysmith.co.uk/blog/2011/06/10/3ds-browser-opens-up-homebrew/</a></p>
+    <h3>two modes</h3>
+    <ul>
+      <li>I'm going down to two major modes: skinny &amp; t-bone. Either can have default (full) or scroll versions so: skinny, skinnyscroll, tbone and tbonescroll classes</li>
+    </ul>
+    <h2>2011-06-08</h2>
+    <h3>more tests</h3>
+    <ul>
+      <li>jQuery works so far</li>
+      <li>viewport width=320 and 398 appear to work, max-scale doesn't seem to do anything</li>
+      <li>window.scrollTo(39, 218) appears to work regardless of wheather i'm in skinny, tbone or fullscreen</li>
+      <li>i guess i need viewport width=device-width, initial-scale=?.0 for all screens, no user-scale=no (skinny gets scale=1.0)</li>
+      <li>X = zoom in, no keydown event, Y = zoom out, no keydown event :(</li>
+      <li>D-Pad moves the screen but does fire events, which is: 37 (left) 38 (up) 39 (right) 40 (down)</li>
+      <li>A = Enter (13), no side effects</li>
+      <li>B doesn't seem to trigger anything</li>
+    </ul>
+    <h2>
+      2011-06-07</h2>
+    <h3>
+      initial thoughts</h3>
+    <ul>
+      <li>The browser does not ignore meta viewport!</li>
+      <li>The 3DS's title bar (Internet, date, battery) takes up exactly 20px; the browser draws over the 3DS's title bar drop shadow</li>
+      <li>The browser's nav bar (at the bottom of bottom screen) takes up exactly 28px; the browser does not draw over the nav bar's top blue line</li>
+      <li>overflow=scroll adds pixels for the scroll bars and should not be used for the bottom screen, handle it with mouse events</li>
+      <li>It supports initial-scale=2.0 to get a nice initial format, however, the 3DS's drop shadow counts and remove 2px from the top screen</li>
+      <li>I can't disable the zoom buttons or scrolling the bottom page to the top</li>
+      <li>Nintendo's bookmarks page is <a href="http://www.nintendo.com/3ds/internetbrowser/bookmarks/">http://www.nintendo.com/3ds/internetbrowser/bookmarks/</a></li>
+      <li>They use meta viewport width=320</li>
+      <li>alert messages don't look bad, they are a nice modal dialog with Message from page: and an OK button</li>
+      <li>My current way to initial load the top screen pushes the top screen one pixel to the right :(, I'll have to compensate by making the usable width 398 instead of 400</li>
+      <li>I might have to scrollTo even fullscreen pages, my last test started the top widescreen on the bottom</li>
+      <li>I think we have canvas support, that is such good news; I don't know about audio</li>
+      <li>I want a third type of frame that has a wide top screen but allows scrolling, the scrolling portion will not be widescreen, this will make a nice headered page</li>
+    </ul>
+  </div>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+﻿<!doctype html>
+<html>
+<head>
+  <title>analog trap</title>
+  <style type="text/css">
+    div
+    {
+      width: 1024px;
+      height: 1024px;
+    }
+  </style>
+</head>
+<body onload="javascript:document.getElementById('trap').focus();">
+  <div>
+    <span>o hai</span>
+    <!--<form action="analoginner.html" method="get">
+      
+    </form>-->
+    <table>
+      <tr>
+        <td>
+        </td>
+        <td>
+          <input type="number" id="trap4" name="four" />
+        </td>
+        <td>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="number" id="trap2" name="two" />
+        </td>
+        <td>
+          <!--<a id="trap" href="javascript:void(0);">link</a>-->
+          <input type="number" id="trap" name="one" />
+        </td>
+        <td>
+          <input type="number" id="trap3" name="three" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+        </td>
+        <td>
+          <input type="number" id="trap5" name="five" />
+        </td>
+        <td>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#trap").blur(function () {
+        $(this).focus();
+      });
+
+      //      .keydown(function () {
+      //        $(this).blur();
+      //      });
+      $(document).keydown(function (e) {
+        if (e.which == 40) {
+          var keydown = jQuery.Event("keypress");
+          keydown.which = 13;
+          $("#trap").trigger(keydown);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

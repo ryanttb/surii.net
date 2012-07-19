@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>done sound</title>
+
+  <meta name="description" content="Trying to make a sound">
+  <meta name="author" content="Ryan Westphal">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="css/index.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="tiny">
+  <div>
+    <h1>&quot;done&quot; sound!</h1>
+    <p>Push the A button to cause the browser to make the download complete, what I'm calling the &quot;done&quot; sound!</p>
+  </div>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $(document).keydown(function (e) {
+        if (e.which == 13) {
+          $('<iframe width="0" height="0"></iframe>').appendTo("body").remove();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

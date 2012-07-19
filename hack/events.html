@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>3DS Event Test</title>
+
+  <meta name="description" content="3DS Event Test">
+  <meta name="author" content="Ryan Westphal">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="css/index.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="tiny">
+  <div>
+    <h1>Event test</h1>
+    <div class="eventTest">
+    </div>
+  </div>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      var events = [];
+      for (var key in window) {
+        if (key.substr(0, 2) == "on") {
+          events.push(key.substr(2));
+        }
+      }
+      var eventnames = events.join(" ");
+      $(window).bind(eventnames, function (e) {
+        var appendHtml = " " + e.type;
+//        if (e.type == "resize") {
+//          //appendHtml += "(" + $(this).width() + "," + $(this).height() + ")";
+//          $("head meta[name='viewport']").remove();
+//          $('<meta name="viewport" content="width=device-width, initial-scale=1">').appendTo("head");
+//        }
+
+        $(".eventTest").html($(".eventTest").html() + appendHtml);
+      });
+    });
+  </script>
+</body>
+</html>
