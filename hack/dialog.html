@@ -19,10 +19,16 @@
     <h2>alert</h2>
     <p>A basic alert</p>
     <button id="cmdAlert" type="button">alert</button>
+
     <h2>confirm</h2>
     <p>A yes or no question.</p>
     <button id="cmdConfirm" type="button">confirm</button>
     <p id="lblConfirm"></p>
+
+    <h2>prompt</h2>
+    <p>A request for modal user input.</p>
+    <button id="cmdPrompt" type="button">prompt</button>
+    <p id="lblPrompt"></p>
 
   </div>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
@@ -32,12 +38,18 @@
       $("#cmdAlert").click(function() {
         alert("I AM ALERT.");
       });
+
       $("#cmdConfirm").click(function() {
         if (confirm("Do you want to play a game?")) {
           $("#lblConfirm").text("Game on!");
         } else {
           $("#lblConfirm").text("Sad panda!");
         }
+      });
+
+      $("#cmdPrompt").click(function() {
+        var value = prompt("Buy something, will ya?", "sword");
+        $("#lblPrompt").text("You bought: " + value);
       });
     });
   </script>

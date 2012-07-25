@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>modernizr tests</title>
+
+  <meta name="description" content="modernizr tests">
+  <meta name="author" content="Ryan Westphal">
+
+  <meta name="viewport" content="width=device-width, initial-scale=">
+
+  <link href="css/index.css" rel="stylesheet" type="text/css" />
+
+  <script type="text/javascript" src="js/modernizr.custom.73913.js"></script>
+</head>
+<body class="skinnyscroll">
+  <div>
+    <h1>modernizr 2.6</h1>
+
+    <h2>modernizr has detected the following features:</h2>
+
+    <div class="cssClasses">
+    </div>
+
+
+  </div>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+
+  <script type="text/javascript">
+    $( function() {
+        var classes = $( "html" ).attr("class").split(" ");
+        $(".cssClasses").html('<p>' + classes.join('</p><p>') + '</p>');
+
+    } );
+  </script>
+
+</body>
+</html>

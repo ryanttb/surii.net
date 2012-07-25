@@ -98,6 +98,17 @@
         List of navigator.plugins:</p>
       <p id="testPlugins">
       </p>
+
+      <h2>img</h2>
+      <img id="link" src="img/link.png" />
+      <p>Every key of img:</p>
+      <p id="testImgKeys">
+      </p>
+      <h2>img values</h2>
+      <p>Enter an img key to see its value:</p>
+      <input id="imgkey" type="text" name="imgkey" />
+      <button type="button" onclick="javascript:document.getElementById('imgval').innerHTML = document.getElementById('link')[document.getElementById('imgkey').value];">Show</button>
+      <p id="imgval"></p>
     </div>
   </div>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
@@ -150,7 +161,14 @@
               plugins += (navigator.plugins[i].name + "<br>");
             }
             return plugins;
-          }
+          },
+          testImgKeys: function () {
+            var keys = "";
+            for (var key in document.getElementById("link")) {
+             keys += (key + ", ");
+            }
+            return keys;
+          },
         };
 
         for (var testkey in tests) {
