@@ -1,10 +1,10 @@
 ﻿/* select parts of html5bp */
 
-html { font-size: 100%; }
+html { font-size: 13px; }
 
 html, button, input, select, textarea { font-family: sans-serif; color: #222; }
 
-body { margin: 0; font-size: 1em; line-height: 1.1; }
+body, ul, li { margin: 0; padding: 0; line-height: 1.1; }
 
 table { border-collapse: collapse; border-spacing: 0; }
 
