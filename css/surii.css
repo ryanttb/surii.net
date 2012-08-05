@@ -1,50 +1,26 @@
-﻿/* A few choice picks from http://html5boilerplate.com/ */
-html, body, div, span, object, iframe, a,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
+﻿/* select parts of html5bp */
+
+html { font-size: 100%; }
+
+html, button, input, select, textarea { font-family: sans-serif; color: #222; }
+
+body { margin: 0; font-size: 1em; line-height: 1.1; }
 
 table { border-collapse: collapse; border-spacing: 0; }
 
-hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+/* surii.net apps */
 
-input, select { vertical-align: middle; }
+/* primary content div(s) */
 
-html { color: #444; font:13px/1.231 Trebuchet MS; *font-size:small; } /* Hack retained to preserve specificity */
-select, input, textarea, button { font:99% Trebuchet MS; }
-
-textarea { overflow: auto; }
-
-/* Align checkboxes, radios, text inputs with their label by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css ; */
-input[type="radio"] { vertical-align: text-bottom; }
-input[type="checkbox"] { vertical-align: bottom; }
-
-input:valid, textarea:valid   {  }
-input:invalid, textarea:invalid {
-   border-radius: 1px; -moz-box-shadow: 0px 0px 5px red; -webkit-box-shadow: 0px 0px 5px red; box-shadow: 0px 0px 5px red;
+body > div
+{
+  margin: 0;
+  padding: 0;
 }
-.no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
-
-h1, h2, h3, h4, h5, h6 { font-weight: bold; }
-
-a, a:active, a:visited { color: #607890; }
-a:hover { color: #036; }
 
 /* screen type classes */
 
-.tiny > div
+.tiny > div:first-child
 {
   height: 212px;
   left: 0px;
