@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>Cancel unload</title>
+
+  <meta name="description" content="Cancel unload">
+  <meta name="author" content="Ryan Westphal">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="../css/surii.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="skinny">
+  <div>
+    <h1>Cancel unload</h1>
+  </div>
+  <div>
+    <p>Can I cancel the request to unload via the back button, L?</p>
+  </div>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/surii.js"></script>
+  <script>
+    $( function( ) {
+      $( window ).on( "beforeunload", function( ) {
+        return "Well now...";
+      } );
+    } );
+  </script>
+
+</body>
+</html>
