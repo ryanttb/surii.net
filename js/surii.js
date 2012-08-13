@@ -1,10 +1,10 @@
-﻿$(function () {
+﻿(function () {
   if ( navigator.userAgent.indexOf( "3DS" ) >= 0 ) {
-    var $body = $("body");
-    if ($body.hasClass("skinny") || $body.hasClass("skinnyscroll")) {
+    var body = getElementsByType( "body" )[ 0 ];
+    if (body.className.indexOf( "skinny" ) >= 0 ) {
       window.scrollTo(0, 218);
-    } else if ($body.hasClass("tbone") || $body.hasClass("tbonescroll")) {
+    } else if ( body.className.indexOf( "tbone" ) >= 0 ) {
       window.scrollTo(39, 218);
     }
   }
-});
+})();

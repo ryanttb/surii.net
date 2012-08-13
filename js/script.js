@@ -1,10 +1,12 @@
-﻿$(function () {
+﻿(function () {
   var apps = ["settings","tinycartridge"],
-      appItems = "";
+      appItems = "",
+      i = 0;
 
-  $.each(apps, function () {
-    appItems += '<li><a href="' + this + '/"><img alt="" src="' + this + '/surii-icon.png" /></a></li>';
-  });
+  
+  for ( ; i < apps.length; i++ ) {
+    appItems += '<li><a href="' + apps[ i ] + '/"><img alt="" src="' + apps[ i ] + '/surii-icon.png" /></a></li>';
+  }
 
-  $(".apps ul").html(appItems);
-});
+  document.getElementById("appsSurii").innerHTML = appItems;
+})();
