@@ -12,8 +12,9 @@ The latest docs and tests are hosted at: http://surii.net/hack
 The following are software quality checks that your app must pass before being hosted on surii.net.
 
 * include surii.css
-* include jQuery 1.8.0 from code.jquery.com before the closing body tag
+* include http://code.jquery.com/jquery-1.8.0.min.js before the closing body tag
 * include surii.min.js before the closing body tag but after jQuery
+* do not include other third-party libraries such as jQuery UI
 * choose one of the following configurations:
 ** viewport initial-scale=1, body class=tiny, exactly one div element inside body
 ** viewport initial-scale=1, body class=skinny, exactly two div elements inside body
