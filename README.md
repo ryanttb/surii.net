@@ -23,6 +23,10 @@ The following are software quality checks that your app must pass before being h
 ** viewport initial-scale=2, body class=tbonescroll, exactly two div elements inside body
 * include a 48x48 pixel icon named surii-icon.png in the root of your app
 * include an explicit link rel="shortcut icon"
+* title should be the exact name of your app
+* apps should have an "L Close" button to return to surii.net home page
+* spell Friend Code as two capitalized words
+* surii.friendCode and surii.nickName are read-only, do not change them
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](https://github.com/cowboy/grunt).

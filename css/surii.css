@@ -96,3 +96,37 @@ body > div
   width: 320px;
 }
 
+/* button templates */
+
+.surii-close
+{
+  -webkit-border-top-left-radius: 24px;
+  -webkit-border-top-right-radius: 24px;
+  margin-left: 4px;
+  width: 98%;
+  height: 24px;
+}
+
+.surii-close.dark
+{
+  background: #888;
+  color: white;
+}
+
+.surii-close .L
+{
+  display: inline-block;
+  font-weight: bold;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  padding-bottom: 2px;
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+}
+
+.surii-close.dark .L
+{
+  background: white;
+  color: #888;
+}
