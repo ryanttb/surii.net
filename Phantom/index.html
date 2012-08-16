@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>Star Wars: Episode I - The Phantom Menace: The Abridged Game</title>
+  <style type="text/css">
+    *
+    {
+      background: transparent;
+      margin: 0;
+      padding: 0;
+    }
+    body
+    {
+      background: #000;
+      color: #fff;
+      font: 0.84em/1.7 normal "Monospace 821" , Geneva, Monaco, monospace;
+      padding-top: 2em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    #game
+    {
+      margin: auto;
+      padding: 0;
+    }
+    #j
+    {
+      border: 1px solid #000;
+      color: #000;
+      margin: auto;
+      width: 576px;
+    }
+    #display
+    {
+      outline: thin solid black;
+      background: url(bg.png) top left repeat;
+      padding: 32px;
+      width: 256px;
+      height: 256px;
+      float: left;
+      position: relative;
+    }
+    #links
+    {
+      position: absolute;
+      left: 32px;
+      top: 32px;
+    }
+    #links a
+    {
+      position: absolute;
+    }
+    #links a:hover
+    {
+      border: 2px dotted #aaf;
+    }
+    #goods
+    {
+      background: #e5d89a;
+      float: left;
+      height: 320px;
+      outline: thin solid black;
+      text-align: left;
+      width: 256px;
+    }
+    .selectedGood a
+    {
+      background-color: #11c;
+      color: #fff;
+    }
+    #text
+    {
+      background: #e5d89a;
+      clear: left;
+      margin: auto;
+      overflow: auto;
+      padding-bottom: 1em;
+      padding-top: 1em;
+      text-align: left;
+      width: 576px;
+    }
+    #text p
+    {
+      margin: 10px;
+      padding: 2px;
+    }
+    h1
+    {
+      color: #fff;
+      margin: 1em auto;
+    }
+    h2
+    {
+      margin: 5px .5em;
+      text-transform: uppercase;
+    }
+    ul
+    {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    ul li
+    {
+      border-bottom: 1px solid #000;
+      margin: 0;
+      padding: .5em 0 .5em 1em;
+    }
+    a
+    {
+      color: #36f;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    a:hover, a:focus
+    {
+      color: #f20;
+      text-decoration: underline;
+    }
+    a:active
+    {
+      color: #60f;
+      text-decoration: underline;
+    }
+    #C{display: none;}
+  </style>
+  <script type="text/javascript" src="g.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script type="text/javascript" src="e.js"></script>
+</head>
+<body onload="e(document, g)">
+  <h1 class="tk-changeling-neo-stencil">
+    Star Wars: Episode I - The Phantom Menace: The Abridged Game</h1>
+  <div id="j">
+    <div id="display">
+      <canvas id="c" alt="" width="256" height="256"></canvas>
+      <div id="links">
+      </div>
+    </div>
+    <div id="goods">
+      <h2>
+        GOODS</h2>
+      <ul>
+      </ul>
+    </div>
+    <div id="text">
+    </div>
+  </div>
+  <canvas id="C" width="999" height="99"></canvas>
+
+  <script>
+   var _gaq = [['_setAccount', 'UA-20129084-1'], ['_trackPageview']];
+   (function(d, t) {
+    var g = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+    g.async = true;
+    g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g, s);
+   })(document, 'script');
+  </script>
+  
+</body>
+</html>
