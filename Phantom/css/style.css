@@ -10,13 +10,13 @@ body
   color: #fff;
   font: .8em normal "Monospace 821" , Geneva, Monaco, monospace;
   padding-top: 2em;
-  text-align: center;
   text-transform: uppercase;
 }
 h1
 {
   color: #fff;
   margin: 0 auto;
+  text-align: center;
 }
 #text
 {
@@ -30,18 +30,13 @@ h1
   margin: 10px;
   padding: 2px;
 }
-#j
-{
-  border: 1px solid #000;
-  color: #222;
-}
+
 #display
 {
+  display: inline-block;
   outline: thin solid black;
   background: url(../img/bg.png) top left repeat;
   padding: 8px;
-  width: 128px;
-  height: 128px;
   position: relative;
 }
 #links
@@ -61,10 +56,14 @@ h1
 #goods
 {
   background: #e5d89a;
-  height: 320px;
   outline: thin solid black;
+  color: #222;
   text-align: left;
   width: 96px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 .selectedGood a
 {
