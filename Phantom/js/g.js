@@ -1,4 +1,4 @@
-﻿// the game data
+// the game data
 var g = {
   s: ["",
   /* 1*/"LIGHT SABER", "MIDICLORIANS", "CONTROLS",
@@ -118,7 +118,7 @@ var g = {
   "EWAN moves to strike",
   "We can't kill this innocent creature."
       ],
-  g: "p.png",
+  g: "img/p.png",
   p: [
   { // 0. evil alien
     x: 246, y: 0, X: 10, Y: 32
