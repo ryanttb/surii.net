@@ -8,21 +8,32 @@ body
 {
   background: #000;
   color: #fff;
-  font: 0.84em/1.7 normal "Monospace 821" , Geneva, Monaco, monospace;
+  font: .8em normal "Monospace 821" , Geneva, Monaco, monospace;
   padding-top: 2em;
   text-align: center;
   text-transform: uppercase;
 }
-#game
+h1
 {
-  margin: auto;
-  padding: 0;
+  color: #fff;
+  margin: 0 auto;
+}
+#text
+{
+  background: #e5d89a;
+  color: #222;
+  padding: .75em 0;
+  text-align: left;
+}
+#text p
+{
+  margin: 10px;
+  padding: 2px;
 }
 #j
 {
   border: 1px solid #000;
-  color: #000;
-  margin: auto;
+  color: #222;
   width: 576px;
 }
 #display
@@ -32,7 +43,6 @@ body
   padding: 32px;
   width: 256px;
   height: 256px;
-  float: left;
   position: relative;
 }
 #links
@@ -62,27 +72,6 @@ body
 {
   background-color: #11c;
   color: #fff;
-}
-#text
-{
-  background: #e5d89a;
-  clear: left;
-  margin: auto;
-  overflow: auto;
-  padding-bottom: 1em;
-  padding-top: 1em;
-  text-align: left;
-  width: 576px;
-}
-#text p
-{
-  margin: 10px;
-  padding: 2px;
-}
-h1
-{
-  color: #fff;
-  margin: 1em auto;
 }
 h2
 {
