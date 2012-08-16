@@ -52,9 +52,34 @@
   background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ccc)); 
   border: solid 1px #ccc;
   border-radius: 8px;
-  display: block;
+  display: inline-block;
   margin: 4px;
   padding: 8px 8px 6px 8px;
-  
-
 }
+
+.app-info
+{
+  display: inline-block;
+  border: 1px solid #dedede;
+  background: #eee;
+  max-width: 144px;
+  overflow: hidden;
+  margin: 0 0 0 8px;
+  padding: 8px;
+  vertical-align: top;
+}
+
+.app-info h2
+{
+  color: #444;
+  font-size: 1.2em;
+  margin: 0;
+  padding: 0;
+}
+
+.app-info span
+{
+  color: #222;
+  font-size: .8em;
+}
+
