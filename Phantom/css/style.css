@@ -34,7 +34,6 @@ h1
 #display
 {
   display: inline-block;
-  outline: thin solid black;
   background: url(../img/bg.png) top left repeat;
   padding: 8px;
   position: relative;
@@ -59,7 +58,7 @@ h1
   outline: thin solid black;
   color: #222;
   text-align: left;
-  width: 96px;
+  width: 112px;
   position: absolute;
   right: 0;
   top: 0;
@@ -104,9 +103,4 @@ a:active
   text-decoration: underline;
 }
 #C{display: none;}
-
-.tbone > div:nth-child(2)
-{
-  background: red;
-}
 
