@@ -86,7 +86,7 @@ $( function( ) {
       }
       $("#text").html(text);
       if (scene.b != undefined) {
-        drawImage({ x: 32 * scene.b, y: 0, X: 32, Y: 32 }, { x: 0, y: 0, X: 8, Y: 8 });
+        drawImage({ x: 32 * scene.b, y: 0, X: 32, Y: 32 }, { x: 0, y: 0, X: 4, Y: 4 });
         //context.drawImage(bg, 32 * scene.b, 0, 32, 32, 0, 0, 256, 256);
       }
 
@@ -94,7 +94,7 @@ $( function( ) {
         $("#links a").remove();
         $.each(scene.l, function () {
           var link = uncompressedGame.l[this];
-          $('<a href="#" title="' + uncompressedGame.s[link.t] + '"/>').data("link", this).css({ left: link.x - 2, top: link.y - 2, width: link.X, height: link.Y }).appendTo("#links");
+          $('<a href="#" title="' + uncompressedGame.s[link.t] + '"/>').data("link", this).css({ left: (link.x - 2)/2, top: (link.y - 2)/2, width: link.X/2, height: link.Y/2 }).appendTo("#links");
           if (link.p != undefined) {
             var prop = uncompressedGame.p[link.p];
             drawImage(uncompressedGame.p[link.p], { x: link.x, y: link.y, X: link.X / prop.X, Y: link.Y / prop.Y });

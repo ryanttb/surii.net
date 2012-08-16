@@ -34,22 +34,21 @@ h1
 {
   border: 1px solid #000;
   color: #222;
-  width: 576px;
 }
 #display
 {
   outline: thin solid black;
   background: url(../img/bg.png) top left repeat;
-  padding: 32px;
-  width: 256px;
-  height: 256px;
+  padding: 8px;
+  width: 128px;
+  height: 128px;
   position: relative;
 }
 #links
 {
   position: absolute;
-  left: 32px;
-  top: 32px;
+  left: 8px;
+  top: 8px;
 }
 #links a
 {
@@ -62,11 +61,10 @@ h1
 #goods
 {
   background: #e5d89a;
-  float: left;
   height: 320px;
   outline: thin solid black;
   text-align: left;
-  width: 256px;
+  width: 96px;
 }
 .selectedGood a
 {
@@ -107,4 +105,9 @@ a:active
   text-decoration: underline;
 }
 #C{display: none;}
+
+.tbone > div:nth-child(2)
+{
+  background: red;
+}
 
