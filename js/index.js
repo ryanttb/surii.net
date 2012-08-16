@@ -1,15 +1,26 @@
 ﻿$(function () {
-  var apps = ["settings","tinycartridge"],
+  var appsSurii = [ "Settings", "Tiny Cartridge" ],
+      appsExternal = {
+        "OkiwiDS": "http://okiwids.co.cc/3DS/"
+      },
       appItems = "",
-      i = 0;
+      i = 0,
+      appEx;
 
-  for ( ; i < apps.length; i++ ) {
-    appItems += '<li><a href="' + apps[ i ] + '/"><img alt="" src="' + apps[ i ] + '/surii-icon.png" /></a></li>';
+  for ( ; i < appsSurii.length; i++ ) {
+    appItems += '<li><a href="' + appsSurii[ i ] + '/" title="' + appsSurii[ i ] + '"><img alt="" src="' + appsSurii[ i ] + '/surii-icon.png" /></a></li>';
   }
 
   $("#appsSurii").html( appItems );
 
-  if ( !surii.friendCode ) {
+  appItems = "";
+  for ( appEx in appsExternal ) {
+    appItems += '<li><a href="' + appsExternal[ appEx ] + '" title="' + appEx + '"><img alt="" src="' + appEx + '/surii-icon.png" /></a></li>';
+  }
+
+  $("#appsExternal").html( appItems );
+
+  if ( !surii.friendCode ) { 
     alert( "You have not entered your\n3DS Friend Code!\nPlease open Settings.\n\nSome games & apps require\na Friend Code to save data\nor interact with other users." );
   }
 });

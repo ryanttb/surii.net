@@ -30,6 +30,7 @@ The following are software quality checks that your app must pass before being h
 * you must have an index.html file
 * all initial content (layout, images, etc.) must be local; ajax can be used to get more later
 * your app folder should match your app name exactly, including case
+* all app and game content should happen on one page; secondary pages (Settings, leader board lists, help) are allowed as long as Back is expected to return to the main game/app; an exception is if an app is designed main menu style where menu items move on to very different games, in this case each secondary "game" must have a link back to surii's home (done via history.go(-2))
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](https://github.com/cowboy/grunt).

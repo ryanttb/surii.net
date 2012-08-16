@@ -13,6 +13,11 @@
   padding: 24px;
 }
 
+.logo
+{
+  height: 218px;
+}
+
 #surii .logoruby
 {
   color: #999;
@@ -30,9 +35,9 @@
   text-align: center;
 }
 
-#surii .apps
+.apps
 {
-  margin-top: 144px;
+  margin: 16px 0;
 }
 
 #surii .apps li
