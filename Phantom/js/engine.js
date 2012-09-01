@@ -43,7 +43,7 @@ $( function( ) {
     function setGoods(goods) {
       $("#goods li").remove();
       $.each(goods, function () {
-        $('<li data-good="' + this + '"><a href="#">' + uncompressedGame.s[this] + '</a></li>').click(function (e) {
+        $('<li data-good="' + this + '"><a href="javascript:void(0);">' + uncompressedGame.s[this] + '</a></li>').click(function (e) {
           $("#goods li").removeClass("selectedGood");
           currentGood = $(this).addClass("selectedGood").attr("data-good");
         }).appendTo($("#goods ul"));
