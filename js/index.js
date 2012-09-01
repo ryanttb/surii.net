@@ -11,6 +11,10 @@
         "Tiny Cartridge": {
           url: "Tiny Cartridge/",
           desc: "3DS news"
+        },
+        "Phantom": {
+          url: "Phantom/",
+          desc: "Phantom Menace: Abridged"
         }
       },
       appsExternal = {
