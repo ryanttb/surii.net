@@ -25,6 +25,11 @@ h1
   padding: .75em 0;
   text-align: left;
 }
+#text b
+{
+  font-size: 1.2em;
+}
+
 #text p
 {
   margin: 10px;
