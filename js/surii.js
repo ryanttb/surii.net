@@ -62,14 +62,18 @@
     if (body.className.indexOf( "skinny" ) >= 0 ) {
       function scrollSkinny() {
         window.scrollTo(0, 218);
-        setTimeout( scrollSkinny, 30 );
+        if ( body.className === "skinny" ) {
+          setTimeout( scrollSkinny, 30 );
+        }
       }
 
       scrollSkinny();
     } else if ( body.className.indexOf( "tbone" ) >= 0 ) {
       function scrollTbone() {
         window.scrollTo(39, 218);
-        setTimeout( scrollTbone, 30 );
+        if ( body.className === "tbone" ) {
+          setTimeout( scrollTbone, 30 );
+        }
       }
 
       scrollTbone();

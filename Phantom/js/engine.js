@@ -6,12 +6,15 @@ $( function( ) {
     currentEvents,
     currentGood = 0,
 
-    bg = new Image(),
-    context = document.getElementById("c").getContext("2d"),
-    contextData,
-    bgContext = document.getElementById("C").getContext("2d"),
+    c = document.getElementById("c"),
+
+    //bg = new Image(),
+    //context = document.getElementById("c").getContext("2d"),
+    //contextData,
+    //bgContext = document.getElementById("C").getContext("2d"),
     bgData;
 
+    /*
     bg.onload = function () {
       bgContext.drawImage(bg, 0, 0);
       bgData = bgContext.getImageData(0, 0, bg.width, bg.height).data;
@@ -19,6 +22,9 @@ $( function( ) {
       setScene(0); // 13, 25, 40, 44, 47, 66
     };
     bg.src = uncompressedGame.g;
+    */
+
+    setScene(0);
 
     $("#links").on("click", "a", function (e) {
       var link = "e" + $(this).data("link");
@@ -88,18 +94,26 @@ $( function( ) {
       }
       $("#text").html(text);
       if (scene.b != undefined) {
-        drawImage({ x: 32 * scene.b, y: 0, X: 32, Y: 32 }, { x: 0, y: 0, X: 6, Y: 6 });
+        c.style.backgroundPosition = "-" + ( 192 * scene.b ) + "px 0px";
+        //drawImage({ x: 32 * scene.b, y: 0, X: 32, Y: 32 }, { x: 0, y: 0, X: 6, Y: 6 });
         //context.drawImage(bg, 32 * scene.b, 0, 32, 32, 0, 0, 256, 256);
       }
 
       if (scene.l) {
         $("#links a").remove();
         $.each(scene.l, function () {
-          var link = uncompressedGame.l[this];
-          $('<a href="javascript:void(0);" title="' + uncompressedGame.s[link.t] + '"/>').data("link", this).css({ left: Math.floor((link.x - 2) * 3/4), top: Math.floor((link.y - 2) * 3/4), width: Math.ceil(link.X * 3/4), height: Math.ceil(link.Y * 3/4) }).appendTo("#links");
+          var link = uncompressedGame.l[this],
+              linkEl = $('<a href="javascript:void(0);" title="' + uncompressedGame.s[link.t] + '"/>').data("link", this).css({ left: Math.ceil((link.x - 2) * 3/4), top: Math.ceil((link.y - 2) * 3/4), width: Math.ceil(link.X * 3/4), height: Math.ceil(link.Y * 3/4) }).appendTo("#links");
           if (link.p != undefined) {
+            linkEl.addClass( "prop" );
+
             var prop = uncompressedGame.p[link.p];
-            drawImage(uncompressedGame.p[link.p], { x: Math.floor(link.x * 3/4), y: Math.floor(link.y * 3/4), X: Math.floor(link.X / prop.X * 3/4), Y: Math.floor(link.Y / prop.Y * 3/4)});
+            linkEl.css( {
+              backgroundPosition: "-" + (prop.x * 6) + "px -" + (prop.y * 6) + "px"
+            } );
+
+
+            //drawImage(uncompressedGame.p[link.p], { x: Math.floor(link.x * 3/4), y: Math.floor(link.y * 3/4), X: Math.floor(link.X / prop.X * 3/4), Y: Math.floor(link.Y / prop.Y * 3/4)});
             //context.drawImage(bg, prop.x, prop.y, prop.X, prop.Y, link.x, link.y, link.X, link.Y);
           }
         });

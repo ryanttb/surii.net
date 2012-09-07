@@ -43,6 +43,12 @@ h1
   padding: 8px;
   position: relative;
 }
+#c
+{
+  background: url(../img/p-large.png);
+  height: 192px;
+  width: 192px;
+}
 #links
 {
   position: absolute;
@@ -53,9 +59,9 @@ h1
 {
   position: absolute;
 }
-#links a:hover
+#links a.prop
 {
-  border: 2px dotted #aaf;
+  background: url(../img/p-large.png);
 }
 #goods
 {
