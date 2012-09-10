@@ -18,10 +18,12 @@
         }
       },
       appsExternal = {
+        /*
         "OkiwiDS": {
           url: "http://okiwids.co.cc/3DS/",
           desc: "web browsing, games, chat"
         }
+        */
       },
       appsHacks = {
         "ryanttb": {
