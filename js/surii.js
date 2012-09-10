@@ -60,9 +60,23 @@
   if ( navigator.userAgent.indexOf( "3DS" ) >= 0 || window.location.host === "localhost" ) {
     var body = $("body")[0];
     if (body.className.indexOf( "skinny" ) >= 0 ) {
-      window.scrollTo(0, 218);
+      function scrollSkinny() {
+        window.scrollTo(0, 218);
+        if ( body.className === "skinny" ) {
+          setTimeout( scrollSkinny, 30 );
+        }
+      }
+
+      scrollSkinny();
     } else if ( body.className.indexOf( "tbone" ) >= 0 ) {
-      window.scrollTo(39, 218);
+      function scrollTbone() {
+        window.scrollTo(39, 218);
+        if ( body.className === "tbone" ) {
+          setTimeout( scrollTbone, 30 );
+        }
+      }
+
+      scrollTbone();
     }
   }
 })( window );
