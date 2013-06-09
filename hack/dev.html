@@ -24,6 +24,18 @@
       <li>All element test page (one at a time, automated)</li>
       <li>Create surii.net Nintendo Zone access point</li>
     </ul>
+    <h2>2013-06-09</h2>
+    <p>Wow, it's been a while.</p>
+    <p>The <i>Mind's Eye</i> on Nintendo Video has a link to vote. That link opens the web browser to <a href="http://watchmindseye.com/3ds">http://watchmindseye.com/3ds</a>. The page pulls the document back when you pan, it's probably just formatted to do that. I doubt it's JavaScript but I'll check it out. They <b>are</b> using JavaScript.</p>
+        <pre>if (navigator.platform.toLowerCase() == &quot;nintendo 3ds&quot;) {
+            window.ndsScrollTo = function() {
+                window.scrollTo(40, 220);
+            };
+            window.ndsScrollTo();
+            window.setInterval(window.ndsScrollTo, 50);
+        } else {
+            window.ndsScrollTo = function () {}
+        }</pre>
     <h2>2012-09-07</h2>
     <p>I finally launched Phantom on surii.net! My first 3DS browser game.</p>
     <h2>2012-08-15</h2>
