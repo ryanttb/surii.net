@@ -77,6 +77,11 @@
   padding: 0;
 }
 
+.app-info h2.small
+{
+  font-size: 1em;
+}
+
 .app-info span
 {
   color: #222;
