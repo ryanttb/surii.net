@@ -1,4 +1,6 @@
 ﻿$(function () {
+  alert( "Twitter has disabled this service, please check back later." );
+  /*
   $.ajax({
     url: "http://api.twitter.com/1/statuses/user_timeline.json?screen_name=tinycartridge",
     dataType: "jsonp",
@@ -20,4 +22,5 @@
       alert("no good: " + xhr.statusText);
     }
   });
+  */
 });
