@@ -1,6 +1,6 @@
 ﻿$(function () {
   function makeItem( name, item ) {
-    return '<li><a href="' + item.url + '" title="' + name + '"><img alt="" src="' + name + '/surii-icon.png" /><div class="app-info" style="display: none;"><h2>' + name + '</h2>' + '<span>' + (item.desc || '') + '</span>' + '</div></a></span></li>';
+    return '<li><a href="' + item.url + '" title="' + name + '"><img alt="" src="' + name + '/surii-icon.png" /><div class="app-info" style="display: none;"><h2 class="' + ( item.titleClass || '' )  + '">' + name + '</h2>' + '<span>' + (item.desc || '') + '</span>' + '</div></a></span></li>';
   }
 
   var appsSurii = {
@@ -17,18 +17,21 @@
           desc: "Phantom Menace: Abridged"
         }
       },
-      appsExternal = {
-        /*
-        "OkiwiDS": {
-          url: "http://okiwids.co.cc/3DS/",
-          desc: "web browsing, games, chat"
-        }
-        */
-      },
       appsHacks = {
         "ryanttb": {
           url: "hack/",
           desc: "3DS browser tricks"
+        },
+      },
+      appsExternal = {
+        "Nekos in Wonderland": {
+          titleClass: "small",
+          url: "http://socialneko.com/wonderland/game.php",
+          desc: "platformer demo"
+        },
+        "Mind's Eye": {
+          url: "http://watchmindseye.com/3ds",
+          desc: "Nintendo Video survey"
         }
       },
       appItems = "",

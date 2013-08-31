@@ -1,5 +1,7 @@
 ﻿/* select parts of html5bp */
 
+* { -webkit-box-sizing: border-box; }
+
 html { font-size: 13px; }
 
 html, button, input, select, textarea { font-family: sans-serif; color: #222; }
