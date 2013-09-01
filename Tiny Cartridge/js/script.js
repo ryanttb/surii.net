@@ -1,18 +1,20 @@
 ﻿$(function () {
-  alert( "Twitter has disabled this service, please check back later." );
-  /*
+  var tcoRegex = /http:\/\/t.co.*?( |$)/; //this.text.match(/http:\/\/t.co.*? /)[0]
   $.ajax({
-    url: "http://api.twitter.com/1/statuses/user_timeline.json?screen_name=tinycartridge",
-    dataType: "jsonp",
+    url: "tiny_timeline.php",
+    dataType: "json",
     success: function (result) {
       var items = "";
       $.each(result, function () {
-        var linkPos = this.text.indexOf("http://t.co"),
+        var linkSearch = this.text.match( tcoRegex ),
             link = "javascript:void(0);";
 
-        if (linkPos >= 0) {
-          link = this.text.substr(linkPos);
-          this.text = this.text.substr(0, linkPos) + " =>";
+        if (linkSearch && linkSearch.length > 0) {
+          link = linkSearch[ 0 ];
+          if ( link[ link.length - 1 ] == ' ' ) {
+            link.length = link.length - 1;
+          }
+          this.text = this.text.replace( link, '' ) + ' =>'; //.substr(0, linkPos) + " =>";
         }
         items += '<li><a href="' + link + '">' + this.text + '</a></li>';
       });
@@ -22,5 +24,4 @@
       alert("no good: " + xhr.statusText);
     }
   });
-  */
 });
